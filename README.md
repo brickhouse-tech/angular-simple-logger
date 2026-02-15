@@ -1,10 +1,20 @@
 # angular-simple-logger
 
-[![Tests](https://github.com/nmccready/angular-simple-logger/actions/workflows/tests.yml/badge.svg)](https://github.com/nmccready/angular-simple-logger/actions/workflows/tests.yml)
+[![Tests](https://github.com/brickhouse-tech/angular-simple-logger/actions/workflows/tests.yml/badge.svg)](https://github.com/brickhouse-tech/angular-simple-logger/actions/workflows/tests.yml)
 [![npm](https://img.shields.io/npm/v/angular-simple-logger.svg)](https://www.npmjs.com/package/angular-simple-logger)
 [![npm](https://img.shields.io/npm/dm/angular-simple-logger.svg)](https://www.npmjs.com/package/angular-simple-logger)
 
 A simple logger for AngularJS 1.x with configurable log levels and optional [debug](https://github.com/visionmedia/debug) integration.
+
+## Why does this still exist?
+
+Good question. AngularJS hit end-of-life in 2022 and yet this package still pulls **~7,000 downloads per week** (365k+ per year). That's because the real world doesn't care about deprecation notices — enterprise apps built on AngularJS are still running in production, and they still need their dependencies maintained.
+
+This library is a dependency of [angular-google-maps](https://www.npmjs.com/package/angular-google-maps) and other AngularJS packages that are, for better or worse, still in active use. As long as people are downloading it, we'll keep the lights on: modern builds, working CI, and security patches.
+
+### What about Angular 2+?
+
+No plans. Modern Angular (2+) doesn't need this — you can use [debug-fabulous](https://github.com/brickhouse-tech/debug-fabulous) directly via ES6 imports, or any other logging library. The AngularJS module wrapper (`nemLogging`) only makes sense in the AngularJS DI world. If you've migrated to modern Angular, you've already outgrown this package. Congratulations. 🎓
 
 ## Installation
 
