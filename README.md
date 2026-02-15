@@ -1,10 +1,38 @@
 # angular-simple-logger
 
-[![Tests](https://github.com/nmccready/angular-simple-logger/actions/workflows/tests.yml/badge.svg)](https://github.com/nmccready/angular-simple-logger/actions/workflows/tests.yml)
+[![Tests](https://github.com/brickhouse-tech/angular-simple-logger/actions/workflows/tests.yml/badge.svg)](https://github.com/brickhouse-tech/angular-simple-logger/actions/workflows/tests.yml)
 [![npm](https://img.shields.io/npm/v/angular-simple-logger.svg)](https://www.npmjs.com/package/angular-simple-logger)
 [![npm](https://img.shields.io/npm/dm/angular-simple-logger.svg)](https://www.npmjs.com/package/angular-simple-logger)
 
 A simple logger for AngularJS 1.x with configurable log levels and optional [debug](https://github.com/visionmedia/debug) integration.
+
+## Why does this still exist?
+
+Good question. AngularJS hit end-of-life in 2022 and yet this package still pulls **~7,000 downloads per week** (365k+ per year). That's because the real world doesn't care about deprecation notices — enterprise apps built on AngularJS are still running in production, and they still need their dependencies maintained.
+
+This library is a dependency of [angular-google-maps](https://www.npmjs.com/package/angular-google-maps) and other AngularJS packages that are, for better or worse, still in active use. As long as people are downloading it, we'll keep the lights on: modern builds, working CI, and security patches.
+
+### What about Angular 2+?
+
+No plans — and here's why it doesn't make sense:
+
+This library exists because AngularJS 1.x had its own dependency injection system and module lifecycle. You couldn't just `import` a logger — you needed it wrapped as an AngularJS service/provider to play nice with `$log`, `$provide.decorator`, and the digest cycle. That's what `nemLogging` does.
+
+**Angular 2+ doesn't have this problem.** Modern Angular uses standard ES modules and TypeScript imports. There's no special DI wrapper needed to use a logging library — you just import it directly. The entire reason this package exists is an AngularJS-specific constraint that no longer applies.
+
+If you're on Angular 2+ (or any modern framework), use these instead:
+
+- **[debug-fabulous](https://www.npmjs.com/package/debug-fabulous)** ([GitHub](https://github.com/brickhouse-tech/debug-fabulous)) — lazy-eval wrapper around `debug` that won't eat your CPU when disabled. Drop-in replacement with zero framework coupling.
+- **[debug](https://www.npmjs.com/package/debug)** ([GitHub](https://github.com/debug-js/debug)) — the OG. Tiny, namespaced, colored output. Works everywhere.
+
+```js
+// That's it. No module wrapper needed.
+import debug from 'debug-fabulous';
+const log = debug('myApp:component');
+log('just works');
+```
+
+If you've migrated to modern Angular, you've already outgrown this package. Congratulations. 🎓
 
 ## Installation
 
