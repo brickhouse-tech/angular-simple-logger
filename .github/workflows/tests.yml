@@ -2,9 +2,14 @@ name: Tests
 on:
   push:
     branches: [master, main]
+    paths-ignore:
+      - '.devcontainer/**'
+      - '.github/workflows/**'
   pull_request:
     branches: [master, main]
-
+    paths-ignore:
+      - '.devcontainer/**'
+      - '.github/workflows/**'
 jobs:
   test:
     runs-on: ubuntu-latest
