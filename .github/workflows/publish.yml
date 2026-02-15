@@ -1,28 +1,11 @@
 name: publish
-
 on:
   push:
     tags:
       - "v*"
-
 jobs:
   tests:
-    uses: ./.github/workflows/tests.yml
-  publish-npm:
+    uses: brickhouse-tech/.github/.github/workflows/tests.yml@main
+  publish:
     needs: [tests]
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write  # Required for OIDC
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Publish to npm
-        run: | # npm 11.15.1 for OIDC support
-          npm install -g npm@11
-          npm ci
-          npm install
-          npm publish --access public
+    uses: brickhouse-tech/.github/.github/workflows/publish.yml@main
