@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.3](https://github.com/brickhouse-tech/angular-simple-logger/compare/v0.2.2...v0.2.3) (2026-02-16)
+
+
+### Bug Fixes
+
+* add browser-safe UMD bundle for bower/script-tag users ([3ffa3d2](https://github.com/brickhouse-tech/angular-simple-logger/commit/3ffa3d249425227a50fcffb805afe048cd322f91)), closes [#32](https://github.com/brickhouse-tech/angular-simple-logger/issues/32)
+
 ## [0.2.2](https://github.com/brickhouse-tech/angular-simple-logger/compare/v0.2.1...v0.2.2) (2026-02-15)
 
 ## 0.2.1 (2026-02-15)
