@@ -49,4 +49,37 @@ function makeConfig(input, outputBase, extraExternal = []) {
 export default [
   ...makeConfig('src/index.js', 'angular-simple-logger', ['debug']),
   ...makeConfig('src/index.light.js', 'angular-simple-logger.light'),
+  // Browser-safe UMD bundle with debug inlined (for bower/script-tag users)
+  // Uses debug's browser build via conditional exports
+  {
+    input: 'src/index.js',
+    external: ['angular'],
+    output: {
+      file: 'dist/angular-simple-logger.bundle.js',
+      format: 'umd',
+      name: 'nemLogging',
+      globals: { angular: 'angular' },
+      exports: 'named',
+    },
+    plugins: [
+      resolve({ browser: true, preferBuiltins: false }),
+      commonjs(),
+    ],
+  },
+  {
+    input: 'src/index.js',
+    external: ['angular'],
+    output: {
+      file: 'dist/angular-simple-logger.bundle.min.js',
+      format: 'umd',
+      name: 'nemLogging',
+      globals: { angular: 'angular' },
+      exports: 'named',
+    },
+    plugins: [
+      resolve({ browser: true, preferBuiltins: false }),
+      commonjs(),
+      terser(),
+    ],
+  },
 ];
