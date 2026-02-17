@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-logger",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Basic logger with level logging which can also be independent. AngularJS 1.x.",
   "main": "./dist/angular-simple-logger.js",
   "module": "./dist/angular-simple-logger.esm.js",
