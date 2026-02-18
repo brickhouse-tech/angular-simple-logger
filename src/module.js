@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from '@brickhouse-tech/angular-lts';
 
 angular.module('nemLogging', []);
 
