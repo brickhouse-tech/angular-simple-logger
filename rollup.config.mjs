@@ -2,8 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 
-const external = ['angular'];
-const globals = { angular: 'angular' };
+const external = ['@brickhouse-tech/angular-lts'];
+const globals = { '@brickhouse-tech/angular-lts': 'angular' };
 
 function makeConfig(input, outputBase, extraExternal = []) {
   const allExternal = [...external, ...extraExternal];
@@ -53,12 +53,12 @@ export default [
   // Uses debug's browser build via conditional exports
   {
     input: 'src/index.js',
-    external: ['angular'],
+    external: ['@brickhouse-tech/angular-lts'],
     output: {
       file: 'dist/angular-simple-logger.bundle.js',
       format: 'umd',
       name: 'nemLogging',
-      globals: { angular: 'angular' },
+      globals: { '@brickhouse-tech/angular-lts': 'angular' },
       exports: 'named',
     },
     plugins: [
@@ -68,12 +68,12 @@ export default [
   },
   {
     input: 'src/index.js',
-    external: ['angular'],
+    external: ['@brickhouse-tech/angular-lts'],
     output: {
       file: 'dist/angular-simple-logger.bundle.min.js',
       format: 'umd',
       name: 'nemLogging',
-      globals: { angular: 'angular' },
+      globals: { '@brickhouse-tech/angular-lts': 'angular' },
       exports: 'named',
     },
     plugins: [

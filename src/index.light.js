@@ -1,4 +1,4 @@
-import angular from 'angular';
+import angular from '@brickhouse-tech/angular-lts';
 import './module';
 import { Logger, FNS, LEVELS } from './logger';
 

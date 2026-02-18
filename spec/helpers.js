@@ -2,7 +2,7 @@
 // Set a truthy value so angular-mocks registers them
 window.jasmine = true;
 
-require('angular');
+require('@brickhouse-tech/angular-lts');
 require('angular-mocks');
 require('../src/index');
 
