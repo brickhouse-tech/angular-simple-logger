@@ -1,0 +1,11 @@
+name: Dependabot Auto-Merge
+
+on: pull_request_target
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    uses: brickhouse-tech/.github/.github/workflows/dependabot-auto-merge.yml@main
