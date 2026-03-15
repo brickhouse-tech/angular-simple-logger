@@ -34,6 +34,20 @@ log('just works');
 
 If you've migrated to modern Angular, you've already outgrown this package. Congratulations. 🎓
 
+## ⚠️ Security: Switch to `@brickhouse-tech/angular-lts`
+
+The original `angular` package (v1.8.3) is **end-of-life** and has **9 unpatched vulnerabilities** (including high-severity ReDoS and XSS). Running `npm audit` will flag these with "No fix available."
+
+[`@brickhouse-tech/angular-lts`](https://www.npmjs.com/package/@brickhouse-tech/angular-lts) is a drop-in replacement with **all 11 CVEs patched** and a clean audit:
+
+```bash
+# Replace angular with the LTS fork
+npm uninstall angular
+npm install @brickhouse-tech/angular-lts
+```
+
+No code changes required — same API, same module name, zero audit warnings.
+
 ## Installation
 
 ```bash

@@ -45,7 +45,16 @@
     "console"
   ],
   "peerDependencies": {
-    "@brickhouse-tech/angular-lts": "^1.9.0"
+    "@brickhouse-tech/angular-lts": "^1.9.0",
+    "angular": ">=1.8.0"
+  },
+  "peerDependenciesMeta": {
+    "angular": {
+      "optional": true
+    },
+    "@brickhouse-tech/angular-lts": {
+      "optional": true
+    }
   },
   "dependencies": {
     "debug": "^4.3.0"
