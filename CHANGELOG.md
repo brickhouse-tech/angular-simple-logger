@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.0.5...v2.1.0) (2026-03-15)
+
+
+### Features
+
+* accept both angular and @brickhouse-tech/angular-lts as peer deps ([8171585](https://github.com/brickhouse-tech/angular-simple-logger/commit/81715852fa5497ed89066d5377fc4a18bb54b9e3))
+
 ## [2.0.5](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.0.4...v2.0.5) (2026-03-06)
 
 ## [2.0.4](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.0.3...v2.0.4) (2026-03-06)
