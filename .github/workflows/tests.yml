@@ -8,3 +8,17 @@ on:
 jobs:
   tests:
     uses: brickhouse-tech/.github/.github/workflows/tests.yml@main
+
+  tests-complete:
+    name: tests
+    needs: [tests]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check test results
+        run: |
+          if [[ "${{ needs.tests.result }}" != "success" ]]; then
+            echo "Tests failed"
+            exit 1
+          fi
+          echo "All tests passed"
