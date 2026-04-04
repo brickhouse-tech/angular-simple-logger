@@ -1,0 +1,14 @@
+name: auto-release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
+  release:
+    needs: [tests]
+    uses: brickhouse-tech/.github/.github/workflows/auto-release.yml@main
