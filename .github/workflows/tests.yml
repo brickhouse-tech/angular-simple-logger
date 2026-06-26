@@ -11,13 +11,13 @@ jobs:
 
   tests-complete:
     name: tests
-    needs: [tests]
+    needs: [test]
     runs-on: ubuntu-latest
     if: always()
     steps:
       - name: Check test results
         run: |
-          if [[ "${{ needs.tests.result }}" != "success" ]]; then
+          if [[ "${{ needs.test.result }}" != "success" ]]; then
             echo "Tests failed"
             exit 1
           fi
