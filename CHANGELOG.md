@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.7](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.1.6...v2.1.7) (2026-09-02)
+
+### Bug Fixes
+
+* **deps:** resolve all open Dependabot security advisories ([f9afa2a](https://github.com/brickhouse-tech/angular-simple-logger/commit/f9afa2a2d147b95f86168c004f102c195ec268b4)), references [#46](https://github.com/brickhouse-tech/angular-simple-logger/issues/46) [#41](https://github.com/brickhouse-tech/angular-simple-logger/issues/41) [#40](https://github.com/brickhouse-tech/angular-simple-logger/issues/40) [#39](https://github.com/brickhouse-tech/angular-simple-logger/issues/39) [#38](https://github.com/brickhouse-tech/angular-simple-logger/issues/38)
 ## [2.1.6](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.1.5...v2.1.6) (2026-06-29)
 
 
