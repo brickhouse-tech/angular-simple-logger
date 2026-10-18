@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.8](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.1.7...v2.1.8) (2026-10-18)
+
 ## [2.1.7](https://github.com/brickhouse-tech/angular-simple-logger/compare/v2.1.6...v2.1.7) (2026-09-02)
 
 ### Bug Fixes
